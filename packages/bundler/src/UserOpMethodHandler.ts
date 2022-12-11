@@ -141,7 +141,8 @@ export class UserOpMethodHandler {
 
     console.log(`UserOperation: Sender=${userOp.sender} EntryPoint=${entryPointInput} Paymaster=${hexValue(userOp.paymasterAndData)}`)
 
-    await this.simulateUserOp(userOp1, entryPointInput)
+    // TODO: Commented out simulation
+    // await this.simulateUserOp(userOp1, entryPointInput)
     const beneficiary = await this.selectBeneficiary()
     const userOpHash = await this.entryPoint.getUserOpHash(userOp)
 
@@ -154,7 +155,9 @@ export class UserOpMethodHandler {
       throw new Error(`userOp.preVerificationGas too low: expected ${expectedPreVerificationGas} but got ${preVerificationGas}`)
     }
 
-    const gasLimit = undefined
+    // TODO: They left this undefined. Find out why
+    const gasLimit = 1e6 // 1M Gas
+    console.log({ gasLimit })
     debug('using gasLimit=', gasLimit)
     await this.entryPoint.handleOps([userOp], beneficiary, { gasLimit }).catch(rethrowError)
 

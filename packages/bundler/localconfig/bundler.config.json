@@ -1,9 +1,9 @@
 {
   "gasFactor": "1",
   "port": "3000",
-  "network": "http://localhost:8545",
-  "entryPoint": "0x2DF1592238420ecFe7f2431360e224707e77fA0E",
-  "beneficiary": "0xd21934eD8eAf27a67f0A70042Af50A1D6d195E81",
+  "network": "https://eth-goerli.g.alchemy.com/v2/hgas1KRZo_vQi_DZvN4ftWKwHBNWZXQu",
+  "entryPoint": "0x9d98Bc2609b080a12aFd52477514DB95d668be3b",
+  "beneficiary": "0x64c4Bffb220818F0f2ee6DAe7A2F17D92b359c5d",
   "minBalance": "1",
   "mnemonic": "./localconfig/mnemonic.txt",
   "helper": "0x780EcF3a794E9eb2b8C9baA6d8C4Ff36EFba770C"
